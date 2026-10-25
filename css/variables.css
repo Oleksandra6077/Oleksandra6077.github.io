@@ -1,0 +1,21 @@
+:root {
+  --black: #111418;
+  --dark-gray: #2F343B;
+  --ash-gray: #8A9099;
+  --light-gray: #E6E9ED;
+  --light-blue: #7FB8E6;
+  --blue: #2563C9;
+  --white: #fff;
+
+  --font-heading: "Manrope", "Segoe UI", Arial, sans-serif;
+  --font-body: "Manrope", "Segoe UI", Arial, sans-serif;
+  --font-caption: "Inter", "Segoe UI", Arial, sans-serif;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 16px;
+  --space-4: 24px; --space-5: 32px; --space-6: 48px;
+
+  --radius-sm: 8px; --radius-md: 12px; --radius-pill: 100px;
+  --page-margin: 80px;
+}
+@media (max-width: 1024px) { :root { --page-margin: 32px; } }
+@media (max-width: 600px)  { :root { --page-margin: 16px; } }
