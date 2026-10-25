@@ -1,0 +1,107 @@
+/* Компоненти дизайн-системи: Button, Input, Card, Badge, Navbar, Toggle, Rating, Modal, Footer */
+
+/* Navbar */
+.site-header { background: var(--white); border: 10px solid var(--light-gray); }
+.navbar {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4); padding: var(--space-3) var(--page-margin);
+}
+.navbar ul { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-5); list-style: none; padding: 0; }
+.navbar a:not(.btn) { color: var(--black); text-decoration: none; font: 600 24px/1.2 var(--font-heading); padding: var(--space-1) 0; }
+.navbar .btn { font: 600 24px/1.2 var(--font-heading); }
+.navbar a:not(.btn):hover, .navbar a[aria-current="page"] { color: var(--blue); }
+.navbar .nav-main { flex: 1; justify-content: space-between; }
+.navbar .nav-actions { gap: var(--space-3); }
+@media (max-width: 768px) {
+  .navbar a:not(.btn), .navbar .btn { font-size: 18px; }
+  .navbar { flex-direction: column; align-items: stretch; }
+  .navbar .nav-main { justify-content: center; gap: var(--space-2) var(--space-4); }
+}
+
+/* Button */
+.btn {
+  display: inline-block; padding: 12px 24px; border: 1px solid var(--blue); border-radius: var(--radius-sm);
+  font: 400 16px/1.3 var(--font-body); text-align: center; text-decoration: none; cursor: pointer;
+  background: var(--blue); color: var(--white);
+}
+.btn:hover { background: #1d4fa3; border-color: #1d4fa3; }
+.btn--secondary { background: var(--white); color: var(--blue); }
+.btn--secondary:hover { background: var(--light-gray); border-color: var(--blue); }
+.btn--disabled, .btn[disabled] {
+  background: var(--light-gray); border-color: var(--light-gray); color: var(--ash-gray); cursor: not-allowed; pointer-events: none;
+}
+.btn--block { display: block; width: 100%; }
+
+/* Input */
+.field { display: flex; flex-direction: column; gap: var(--space-1); text-align: left; }
+.field label { font-size: 13px; color: var(--blue); }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 10px 12px; font: inherit; color: var(--black);
+  background: var(--white); border: 1px solid var(--ash-gray); border-radius: var(--radius-sm);
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid var(--light-blue); border-color: var(--blue); }
+.field input:disabled { background: var(--light-gray); color: var(--ash-gray); }
+.field input:user-invalid { border: 2px solid var(--dark-gray); }
+.field textarea { min-height: 120px; resize: vertical; }
+
+/* Badge */
+.badge {
+  display: inline-block; padding: 10px 4px; border-radius: var(--radius-pill);
+  font: 400 13px/1.2 var(--font-caption); background: var(--light-blue); color: var(--black);
+}
+.badge--full { background: var(--light-gray); color: var(--dark-gray); }
+.badge--booked { background: var(--blue); color: var(--white); }
+
+/* Card */
+.card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-md); padding: var(--space-4); }
+.panel { background: var(--white); border: 1px solid var(--ash-gray); border-radius: var(--radius-md); padding: var(--space-4); }
+.class-card { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding: var(--space-4); border: 0; }
+.class-card .trainer { color: var(--dark-gray); }
+
+/* Toggle (checkbox) */
+.toggle { position: relative; display: inline-block; width: 44px; height: 24px; flex: none; }
+.toggle input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.toggle span { position: absolute; inset: 0; background: var(--ash-gray); border-radius: var(--radius-pill); transition: background .2s; }
+.toggle span::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px;
+  background: var(--white); border-radius: 50%; transition: transform .2s;
+}
+.toggle input:checked + span { background: var(--blue); }
+.toggle input:checked + span::after { transform: translateX(20px); }
+.toggle input:focus-visible + span { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+/* Rating (радіокнопки, зірки справа наліво) */
+.rating { display: flex; flex-direction: row-reverse; justify-content: center; gap: var(--space-1); border: 0; padding: 0; }
+.rating input { position: absolute; opacity: 0; }
+.rating label { font-size: 28px; line-height: 1; color: var(--ash-gray); cursor: pointer; }
+.rating input:checked ~ label, .rating label:hover, .rating label:hover ~ label { color: var(--blue); }
+.rating input:focus-visible + label { outline: 3px solid var(--blue); }
+
+/* Modal (без JavaScript: відкривається через :target) */
+.modal {
+  position: fixed; inset: 0; z-index: 10; display: none; align-items: center; justify-content: center;
+  padding: var(--space-3); background: rgba(17, 20, 24, .5);
+}
+.modal:target { display: flex; }
+.modal__box h2 { font-size: 24px; }
+.modal__box { position: relative; width: 100%; max-width: 380px; background: var(--white); border-radius: var(--radius-md); padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-3); }
+.modal__close { position: absolute; top: var(--space-3); right: var(--space-3); color: var(--ash-gray); text-decoration: none; font-size: 20px; line-height: 1; }
+.modal__actions { display: flex; gap: var(--space-2); }
+.modal__actions .btn { flex: 1; }
+.notice { padding: var(--space-3); border-radius: var(--radius-sm); background: var(--light-blue); font-size: 14px; }
+.notice--muted { background: var(--light-gray); color: var(--dark-gray); }
+
+/* Footer */
+.site-footer { background: var(--light-blue); border: 2px solid var(--blue); color: var(--dark-gray); font: 400 13px/1.6 var(--font-caption); }
+.site-footer address { font-style: normal; }
+.footer-title { color: var(--black); }
+.footer-inner {
+  display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-4) 120px;
+  min-height: 100px; padding: 4px 7px 0 clamp(16px, 18.6vw, 268px);
+}
+.footer-inner p { line-height: 1.6; }
+.footer-logo { margin-left: auto; display: grid; place-items: center; width: 90px; height: 90px; border-radius: 50%; background: var(--ash-gray); color: var(--white); font-size: 13px; text-decoration: none; }
+@media (max-width: 768px) {
+  .footer-inner { flex-direction: column; align-items: flex-start; padding: var(--space-3) var(--page-margin); }
+  .footer-logo { margin-left: 0; }
+}

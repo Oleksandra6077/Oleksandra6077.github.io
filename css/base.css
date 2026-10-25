@@ -1,0 +1,25 @@
+/* Скидання, типографіка, каркас сторінки */
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh; display: flex; flex-direction: column;
+  font: 400 16px/1.5 var(--font-body); color: var(--black); background: var(--white);
+}
+img { max-width: 100%; display: block; }
+a { color: var(--blue); }
+h1, h2, h3 { font-family: var(--font-heading); }
+h1 { font-size: 32px; font-weight: 600; line-height: 1.25; }
+h2 { font-size: 24px; font-weight: 600; }
+h3 { font-size: 18px; font-weight: 500; }
+.caption { font: 400 13px/1.5 var(--font-caption); color: var(--dark-gray); }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+main { flex: 1; padding: var(--space-6) var(--page-margin); }
+.wide { max-width: 1280px; margin-inline: auto; }
+.container { max-width: 1280px; margin-inline: auto; }
+.center { text-align: center; }
+.stack { display: flex; flex-direction: column; gap: var(--space-3); }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+@media (max-width: 600px) { h1 { font-size: 26px; } h2 { font-size: 21px; } main { padding-block: var(--space-5); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
