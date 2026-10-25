@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Особистий кабінет — FitZone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Головна навігація">
+      <ul class="nav-main">
+        <li><a href="home.html">FitZone</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="home.html#about">Про студію</a></li>
+        <li><a href="my-bookings.html">Мої бронювання</a></li>
+        <li><a href="account.html" aria-current="page">Мій Кабінет</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wide">
+      <h1 class="center" style="margin-bottom:var(--space-5)">Особистий кабінет</h1>
+      <section class="card row" aria-label="Профіль">
+        <div class="profile">
+          <span class="avatar" aria-hidden="true">М</span>
+          <div><p>Марія Коваленко</p><p class="caption">марія@email.com</p></div>
+        </div>
+        <a href="#">Редагувати профіль</a>
+      </section>
+      <section class="card row" aria-label="Абонемент">
+        <div>
+          <p>Статус абонементу</p>
+          <p class="caption">Активний до 15.11.2026 <span class="badge">● Активний</span></p>
+        </div>
+        <a href="#">Продовжити підписку</a>
+      </section>
+      <section class="card row" aria-label="Сповіщення">
+        <label for="remind">Нагадування про заняття</label>
+        <span class="toggle"><input id="remind" type="checkbox" checked><span></span></span>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <address>
+        <p><span class="footer-title">Контакти:</span><br>
+        Номер телефону: <a href="tel:+380111111111" style="color:inherit">+380 11 111 1111</a><br>
+        Email: <a href="mailto:FitZone@email.com" style="color:inherit">FitZone@email.com</a><br>
+        Адреса центру: м. Щасливе, вул. Спортивна, 15</p>
+      </address>
+      <p>Рік заснування: 2026<br>Назва компанії: FitZone<br>© 2026 Усі права захищені</p>
+      <a class="footer-logo" href="home.html" aria-label="FitZone — на головну">Логотип</a>
+    </div>
+  </footer>
+</body>
+</html>

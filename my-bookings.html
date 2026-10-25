@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мої бронювання — FitZone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Головна навігація">
+      <ul class="nav-main">
+        <li><a href="home.html">FitZone</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="home.html#about">Про студію</a></li>
+        <li><a href="my-bookings.html" aria-current="page">Мої бронювання</a></li>
+        <li><a href="account.html">Мій Кабінет</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="narrow">
+      <h1 class="center">Мої бронювання</h1>
+      <section aria-labelledby="active-title">
+        <h2 id="active-title">Активні бронювання</h2>
+        <ul class="list">
+          <li class="row"><span>Йога · 07.10.2026 · 09:00 · Тренер Олена К.</span><a class="btn btn--secondary" href="#cancel-ok">Скасувати</a></li>
+          <li class="row"><span>Кросфіт · 09.10.2026 · 11:00 · Тренер Надія П.</span><a class="btn btn--secondary" href="#cancel-blocked">Скасувати</a></li>
+          <li class="row"><span>Бокс · 02.10.2026 · 18:30 · Тренер Олександр В.</span><span class="btn btn--disabled" aria-disabled="true">Скасувати</span></li>
+        </ul>
+      </section>
+      <section aria-labelledby="hist-title">
+        <h2 id="hist-title">Історія відвідувань</h2>
+        <ul class="list">
+          <li class="row"><span>Йога · 20.09.2026 · 09:00</span><a class="btn btn--secondary" href="review.html">Залишити відгук</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal" id="cancel-ok" role="dialog" aria-modal="true" aria-labelledby="c1-title">
+    <div class="modal__box">
+      <a class="modal__close" href="#" aria-label="Закрити">✕</a>
+      <h2 id="c1-title">Скасування бронювання</h2>
+      <p>Кросфіт · 09.10.2026 · 11:00</p>
+      <p>Тренер: Надія П.</p>
+      <p class="caption">Ви впевнені, що хочете скасувати це заняття? Кошти будуть повернені на ваш баланс</p>
+      <div class="modal__actions">
+        <a class="btn btn--secondary" href="#">Ні, залишити</a>
+        <a class="btn" href="#">Так, скасувати</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="cancel-blocked" role="dialog" aria-modal="true" aria-labelledby="c2-title">
+    <div class="modal__box">
+      <a class="modal__close" href="#" aria-label="Закрити">✕</a>
+      <h2 id="c2-title">Скасування бронювання</h2>
+      <p>Кросфіт · 09.10.2026 · 11:00</p>
+      <p>Тренер: Надія П.</p>
+      <p class="notice notice--muted">✕ Скасування недоступне: до початку залишилося менше 3 годин</p>
+      <a class="btn btn--secondary btn--block" href="#">Закрити</a>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <address>
+        <p><span class="footer-title">Контакти:</span><br>
+        Номер телефону: <a href="tel:+380111111111" style="color:inherit">+380 11 111 1111</a><br>
+        Email: <a href="mailto:FitZone@email.com" style="color:inherit">FitZone@email.com</a><br>
+        Адреса центру: м. Щасливе, вул. Спортивна, 15</p>
+      </address>
+      <p>Рік заснування: 2026<br>Назва компанії: FitZone<br>© 2026 Усі права захищені</p>
+      <a class="footer-logo" href="home.html" aria-label="FitZone — на головну">Логотип</a>
+    </div>
+  </footer>
+</body>
+</html>

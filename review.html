@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Відгук про тренера — FitZone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Головна навігація">
+      <ul class="nav-main">
+        <li><a href="home.html">FitZone</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="home.html#about">Про студію</a></li>
+        <li><a href="my-bookings.html">Мої бронювання</a></li>
+        <li><a href="account.html">Мій Кабінет</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card review" aria-labelledby="rv-title">
+      <h1 id="rv-title" style="font-size:24px">Залишити відгук</h1>
+      <p class="caption">Йога · 20.09.2026 · Тренер Олена К.</p>
+      <form class="stack" action="my-bookings.html">
+        <fieldset class="rating">
+          <legend class="caption" style="margin:0 auto var(--space-2);float:none;width:100%">Ваша оцінка</legend>
+          <input type="radio" id="s5" name="score" value="5" checked><label for="s5" title="5">★</label>
+          <input type="radio" id="s4" name="score" value="4"><label for="s4" title="4">★</label>
+          <input type="radio" id="s3" name="score" value="3"><label for="s3" title="3">★</label>
+          <input type="radio" id="s2" name="score" value="2"><label for="s2" title="2">★</label>
+          <input type="radio" id="s1" name="score" value="1"><label for="s1" title="1">★</label>
+        </fieldset>
+        <div class="field"><label class="visually-hidden" for="comment">Коментар</label><textarea id="comment" name="comment" placeholder="Поділіться враженнями про заняття..."></textarea></div>
+        <button class="btn" type="submit">Надіслати відгук</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <address>
+        <p><span class="footer-title">Контакти:</span><br>
+        Номер телефону: <a href="tel:+380111111111" style="color:inherit">+380 11 111 1111</a><br>
+        Email: <a href="mailto:FitZone@email.com" style="color:inherit">FitZone@email.com</a><br>
+        Адреса центру: м. Щасливе, вул. Спортивна, 15</p>
+      </address>
+      <p>Рік заснування: 2026<br>Назва компанії: FitZone<br>© 2026 Усі права захищені</p>
+      <a class="footer-logo" href="home.html" aria-label="FitZone — на головну">Логотип</a>
+    </div>
+  </footer>
+</body>
+</html>

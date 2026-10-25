@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Головна — FitZone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Головна навігація">
+      <ul class="nav-main">
+        <li><a href="index.html">FitZone</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="index.html#about">Про студію</a></li>
+      </ul>
+      <ul class="nav-actions">
+        <li><a class="btn" href="login.html">Увійти</a></li>
+        <li><a class="btn btn--secondary" href="register.html">Зареєструватися</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__text">
+          <h1 id="hero-title">Бронюйте тренування онлайн</h1>
+          <p>Обирайте заняття, бронюйте місце й оплачуйте онлайн — без дзвінків і черг</p>
+          <a class="btn" href="schedule.html">Переглянути розклад</a>
+        </div>
+        <div class="hero__photo" role="img" aria-label="Фото студії">Фото</div>
+      </section>
+      <section id="about" aria-label="Найближчі заняття">
+        <div class="class-grid">
+        <article class="card class-card">
+          <h2 class="card-title">09:00 · Йога</h2>
+          <p class="trainer">Тренер: Олена К.</p>
+          <span class="badge">● Вільно</span>
+          <a class="btn" href="login.html">Забронювати</a>
+        </article>
+        <article class="card class-card">
+          <h2 class="card-title">11:00 · Кросфіт</h2>
+          <p class="trainer">Тренер: Надія П.</p>
+          <span class="badge">● Вільно</span>
+          <a class="btn" href="login.html">Забронювати</a>
+        </article>
+        <article class="card class-card">
+          <h2 class="card-title">18:30 · Бокс</h2>
+          <p class="trainer">Тренер: Олександр В.</p>
+          <span class="badge">● Вільно</span>
+          <a class="btn" href="login.html">Забронювати</a>
+        </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <address>
+        <p><span class="footer-title">Контакти:</span><br>
+        Номер телефону: <a href="tel:+380111111111" style="color:inherit">+380 11 111 1111</a><br>
+        Email: <a href="mailto:FitZone@email.com" style="color:inherit">FitZone@email.com</a><br>
+        Адреса центру: м. Щасливе, вул. Спортивна, 15</p>
+      </address>
+      <p>Рік заснування: 2026<br>Назва компанії: FitZone<br>© 2026 Усі права захищені</p>
+      <a class="footer-logo" href="index.html" aria-label="FitZone — на головну">Логотип</a>
+    </div>
+  </footer>
+</body>
+</html>
