@@ -1,4 +1,4 @@
-/* Скидання, типографіка, каркас сторінки */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; }
 body {
