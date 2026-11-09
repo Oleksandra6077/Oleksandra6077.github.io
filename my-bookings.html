@@ -31,9 +31,9 @@
       <section aria-labelledby="active-title">
         <h2 id="active-title">Активні бронювання</h2>
         <ul class="list">
-          <li class="row"><span>Йога · 07.10.2026 · 09:00 · Тренер Олена К.</span><a class="btn btn--secondary" href="#cancel-ok">Скасувати</a></li>
-          <li class="row"><span>Кросфіт · 09.10.2026 · 11:00 · Тренер Надія П.</span><a class="btn btn--secondary" href="#cancel-blocked">Скасувати</a></li>
-          <li class="row"><span>Бокс · 02.10.2026 · 18:30 · Тренер Олександр В.</span><span class="btn btn--disabled" aria-disabled="true">Скасувати</span></li>
+          <li class="row" data-id="b1" data-hours="48"><span>Йога · 07.10.2026 · 09:00 · Тренер Олена К.</span><a class="btn btn--secondary" href="#cancel-ok">Скасувати</a></li>
+          <li class="row" data-id="b2" data-hours="2"><span>Кросфіт · 09.10.2026 · 11:00 · Тренер Надія П.</span><a class="btn btn--secondary" href="#cancel-blocked">Скасувати</a></li>
+          <li class="row" data-id="b3"><span>Бокс · 02.10.2026 · 18:30 · Тренер Олександр В.</span><span class="btn btn--disabled" aria-disabled="true">Скасувати</span></li>
         </ul>
       </section>
       <section aria-labelledby="hist-title">
@@ -49,12 +49,12 @@
     <div class="modal__box">
       <a class="modal__close" href="#" aria-label="Закрити">✕</a>
       <h2 id="c1-title">Скасування бронювання</h2>
-      <p>Кросфіт · 09.10.2026 · 11:00</p>
-      <p>Тренер: Надія П.</p>
+      <p id="cancel-class">Кросфіт · 09.10.2026 · 11:00</p>
+      <p id="cancel-trainer">Тренер: Надія П.</p>
       <p class="caption">Ви впевнені, що хочете скасувати це заняття? Кошти будуть повернені на ваш баланс</p>
       <div class="modal__actions">
         <a class="btn btn--secondary" href="#">Ні, залишити</a>
-        <a class="btn" href="#">Так, скасувати</a>
+        <a class="btn" href="#" data-action="confirm-cancel">Так, скасувати</a>
       </div>
     </div>
   </div>
@@ -63,8 +63,8 @@
     <div class="modal__box">
       <a class="modal__close" href="#" aria-label="Закрити">✕</a>
       <h2 id="c2-title">Скасування бронювання</h2>
-      <p>Кросфіт · 09.10.2026 · 11:00</p>
-      <p>Тренер: Надія П.</p>
+      <p id="blocked-class">Кросфіт · 09.10.2026 · 11:00</p>
+      <p id="blocked-trainer">Тренер: Надія П.</p>
       <p class="notice notice--muted">✕ Скасування недоступне: до початку залишилося менше 3 годин</p>
       <a class="btn btn--secondary btn--block" href="#">Закрити</a>
     </div>
@@ -81,5 +81,7 @@
       <a class="footer-logo" href="home.html" aria-label="FitZone — на головну">Логотип</a>
     </div>
   </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/booking.js" defer></script>
 </body>
 </html>
